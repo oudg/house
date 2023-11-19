@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.mapper.PostMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hy.pojo.Post">
+        <id column="userId" property="userId" />
+        <result column="postTitle" property="postTitle" />
+        <result column="postContent" property="postContent" />
+        <result column="postSummary" property="postSummary" />
+        <result column="postThumbnail" property="postThumbnail" />
+        <result column="postStatus" property="postStatus" />
+        <result column="price" property="price" />
+        <result column="number" property="number" />
+        <result column="cateId" property="cateId" />
+        <result column="cityId" property="cityId" />
+        <result column="imgUrl" property="imgUrl" />
+        <result column="postEditor" property="postEditor" />
+        <result column="roomCount" property="roomCount" />
+        <result column="toiletCount" property="toiletCount" />
+        <result column="area" property="area" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        userId, postTitle, postContent, postSummary, postThumbnail, postStatus, price, number, cateId, cityId, imgUrl, postEditor, roomCount, toiletCount, area
+    </sql>
+    <select id="selectPageVo" resultType="com.hy.pojo.Post">
+        SELECT userId, postTitle, postContent, postSummary, postThumbnail, postStatus, price, number, cateId, cityId, imgUrl, postEditor, roomCount, toiletCount, area from post WHERE state=#{state}
+    </select>
+
+</mapper>

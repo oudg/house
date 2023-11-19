@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="unit.hy.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.hy.pojo.User">
+        <result column="userName" property="userName" />
+        <result column="userPass" property="userPass"/>
+        <result column="phone" property="phone"/>
+    </resultMap>
+
+
+</mapper>
